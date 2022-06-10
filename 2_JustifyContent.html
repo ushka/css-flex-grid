@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flex &amp; Grid – Justify Content</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<style>
+.wrapper {  
+  width:  700px;
+  background: #eee;
+  padding: 20px;
+  border-radius: 30px;
+}
+.menu {
+  display: flex;  
+}
+.menu a {
+  background: white;
+  padding: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.menu a.active {
+  background: blue;
+  color: white;
+  padding: 10px;
+}
+.space-between {
+  justify-content: space-between;
+}
+.end {
+  justify-content: end;
+}
+.center {
+  justify-content: center;
+}
+.space-around {
+  justify-content: space-around;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.card {
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+}
+.card ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card h1 {
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.team {
+  background: #eee;
+  border-radius: 20px;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  padding: 30px;
+}
+.team ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;  
+}
+.team img {
+  border-radius: 50%;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);
+}
+</style>  
+
+<h1>Justify Content</h1>
+
+<h2>Example 1: Tabs</h2>
+
+<h3>Space Between</h3>
+<div class="wrapper">
+  <div class="menu space-between">
+    <a class="active" href="#">Profile</a>
+    <a href="#">Notifications</a>
+    <a href="#">Payments</a>
+    <a href="#">Settings</a>
+  </div>
+</div>
+
+<h3>Start</h3>
+<div class="wrapper">
+  <div class="menu">
+    <a class="active" href="#">Profile</a>
+    <a href="#">Notifications</a>
+    <a href="#">Payments</a>
+    <a href="#">Settings</a>
+  </div>
+</div>
+
+<h3>End</h3>
+<div class="wrapper">
+  <div class="menu end">
+    <a class="active" href="#">Profile</a>
+    <a href="#">Notifications</a>
+    <a href="#">Payments</a>
+    <a href="#">Settings</a>
+  </div>
+</div>
+
+<h3>Center</h3>
+<div class="wrapper">
+  <div class="menu center">
+    <a class="active" href="#">Profile</a>
+    <a href="#">Notifications</a>
+    <a href="#">Payments</a>
+    <a href="#">Settings</a>
+  </div>
+</div>
+
+<h3>Space Around</h3>
+<div class="wrapper">
+  <div class="menu space-around">
+    <a class="active" href="#">Profile</a>
+    <a href="#">Notifications</a>
+    <a href="#">Payments</a>
+    <a href="#">Settings</a>
+  </div>
+</div>
+
+<h3>Space Evenly</h3>
+<div class="wrapper">
+  <div class="menu space-evenly">
+    <a class="active" href="#">Profile</a>
+    <a href="#">Notifications</a>
+    <a href="#">Payments</a>
+    <a href="#">Settings</a>
+  </div>
+</div>
+
+<div class="spacer-100"></div>
+
+<h2>Example 2: Card with Previous &amp; Next Links</h2>
+
+<div class="card">
+  <h1>My awesome card</h1>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, excepturi neque error quaerat voluptatum corporis, maiores debitis et consequuntur nemo?</p>
+  <ul>
+    <li><a href="#">Prev</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</div>
+
+<div class="spacer-100"></div>
+
+<h2>Example 3: Team Profiles</h2>
+
+<div class="team">
+  <ul>
+    <li>
+      <img src="http://placekitten.com/80/80" alt="kitten 1">
+    </li>
+    <li>
+      <img src="http://placekitten.com/80/80" alt="kitten 1">
+    </li>
+    <li>
+      <img src="http://placekitten.com/80/80" alt="kitten 1">
+    </li>
+    <li>
+      <img src="http://placekitten.com/80/80" alt="kitten 1">
+    </li>
+  </ul>
+</div>
+
+<div class="spacer-100"></div>
+
+</body>
+</html>
