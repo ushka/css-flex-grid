@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flex &amp; Grid – Align Items</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<style>
+
+.icon-container {
+  display: flex;
+  justify-self: space-between;
+}
+.icon-wrap {
+  display: flex;  
+
+  background: #eee;
+  border: 1px solid #ccc;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);  
+  border-radius: 10px;
+  width: 150px;
+  padding: 8px 15px;
+  margin-right: 15px;
+}
+.icon {
+  display: flex;
+
+  background: mediumaquamarine;  
+  border-radius: 4px;
+  padding: 4px;
+}
+.text-icon {
+  display: flex;
+
+  font-weight: 700;
+  background: mediumaquamarine;  
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+.icon-text {
+  border: 1px solid #ccc;
+  font-weight: 700;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+
+  background: #eee;
+  border: 1px solid #ccc;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);  
+  border-radius: 10px;
+  width: 300px;
+  padding: 8px 15px;
+}
+.profile-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.profile-text {
+  margin-left: 15px;
+}
+.profile-text h3, p {
+  margin: 0;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  background: #eee;  
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+.services {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);  
+  max-width: 250px;
+  padding: 20px;
+  margin: 0 20px;
+  text-align: center;
+}
+.services-icon {
+  display: inline-flex;
+
+  background: mediumaquamarine;
+  padding: 20px;
+  border-radius: 100%;
+}
+.services h3 {
+  margin-top: 30px;
+}
+
+
+</style>  
+
+<h1>Align Items</h1>  
+
+<h2>Example 1: Icon and Text</h2>
+
+<div class="icon-container">
+
+  <div class="icon-wrap align-center">
+    <span class="icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </span>
+    <span class="icon-text">
+      Center
+    </span>
+  </div>
+
+  <div class="icon-wrap align-stretch">
+    <span class="icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </span>
+    <span class="icon-text">
+      Stretch
+    </span>
+  </div>
+
+  <div class="icon-wrap align-start">
+    <span class="icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </span>
+    <span class="icon-text">
+      Flex-start
+    </span>
+  </div>
+
+  <div class="icon-wrap align-end">
+    <span class="icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </span>
+    <span class="icon-text">
+      Flex-end
+    </span>
+  </div>
+
+  <div class="icon-wrap align-end">
+    <span class="icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </span>
+    <span class="icon-text">
+      Baseline
+    </span>
+  </div>
+
+</div>
+
+<div class="spacer-100"></div>
+
+<h2>Example 2: Icon and Text (Baseline text icon)</h2>
+
+<div class="icon-wrap align-end">
+  <span class="text-icon">B</span>
+  <span class="icon-text">
+    Baseline
+  </span>
+</div>
+
+<div class="spacer-100"></div>
+
+<h2>Example 3: Profile Card</h2>
+
+<div class="profile-card">
+  <img src="http://placekitten.com/100/100" alt="kitten employee">
+  <div class="profile-text">    
+    <h3>Cat McCatson</h3>
+    <p>Software Developer</p>
+  </div>
+</div>
+
+<div class="spacer-100"></div>
+
+<h2>Example 4: Services Section</h2>
+
+<div class="services-container">
+  
+  <div class="services">
+    <span class="services-icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+    </span>
+    <h3>Video Editing</h3>
+    <p>Lorem, ipsum dolor sit, amet consectetur adipisicing elit.</p>
+  </div>
+
+  <div class="services">
+    <span class="services-icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+    </span>
+    <h3>Graphic Design</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate soluta adipisci, eligendi atque quibusdam?</p>
+  </div>
+
+  <div class="services">
+    <span class="services-icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+    </span>
+    <h3>Cartography</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eligendi cum maiores harum incidunt.</p>
+  </div>
+
+</div>
+
+<div class="spacer-100"></div>
+
+</body>
+</html>
