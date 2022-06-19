@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flex &amp; Grid – Flex Shrink</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<style>
+
+.itinerary-item {
+  display: flex;
+  align-items: flex-start;
+
+  border: 1px solid #dedede;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);  
+  border-radius: 10px;
+  width: 30em;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.itinerary-item span {
+  flex-shrink: 0;
+
+  margin: 0.25rem 2rem;
+  padding: 0.4rem 1.1rem 0.3rem;
+  background-color: mediumaquamarine;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 1rem;
+}
+.itinerary-item p {
+  margin-top: 0.25rem;
+}
+.itinerary-item h2 {
+  margin-top: 0.25rem;
+  font-size: 1.2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  max-width: 50rem;
+
+  border: 1px solid #dedede;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);  
+  border-radius: 10px;
+  padding: 20px;
+}
+.profile-img {
+  flex-shrink: 0;
+
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+.profile-info p {
+  color: #555; 
+  margin: 5px 0 0 0; 
+}
+.profile-info h3 {
+  margin: 0;
+}
+
+
+</style>  
+
+<h1>Flex Grow</h1>  
+
+<h2>Example 1: Itinerary</h2>
+
+<section class="itinerary">  
+  <div class="itinerary-item">
+    <div>
+      <h2>Surf Waikiki Beach</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, sunt at dignissimos <em>(flex-shrink:0 keeps the date pill from breaking onto the next line)</em>.</p>
+    </div>
+    <span>10:00 AM</span>
+  </div>
+
+  <div class="itinerary-item">
+    <div>
+      <h2>Surf Waimea Bay</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt id cupiditate hic modi deleniti porro recusandae vitae officiis officia illum quas, non? Earum ducimus quae eos beatae ad tempora.</p>
+    </div>
+    <span>2:00 PM</span>  
+  </div>
+</section>
+
+<div class="spacer-100"></div>
+
+<h2>Example 2: Profile Card</h2>
+
+
+<div class="profile">
+  <img src="http://placekitten.com/160/240" class="profile-img" alt="kitten profile">
+  <div class="profile-info">
+    <h3>Cat McCatson</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam maiores dolorum aut pariatur culpa <em>(flex-shrink:0 keeps the image from becoming an oval)</em>.</p>
+  </div>
+</div>
+
+<div class="spacer-100"></div>
+
+</body>
+</html>
