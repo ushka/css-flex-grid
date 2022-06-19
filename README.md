@@ -8,4 +8,5 @@ Examples using CSS Flexbox and Grid.
 4. [Align Items](4_AlignItems.html)
 5. [Flex Direction](5_FlexDirection.html)
 6. [Flex Grow](6_FlexGrow.html)
-6. [Flex Shrink](7_FlexShrink.html)
+7. [Flex Shrink](7_FlexShrink.html)
+8. [Flex Basis](8_FlexBasis.html)

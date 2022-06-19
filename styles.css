@@ -4,6 +4,10 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
+* {
+  box-sizing: border  -box;
+}
+
 h1 {
   font-weight: 900;
   margin-bottom: 30px;

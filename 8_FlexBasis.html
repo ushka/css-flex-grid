@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flex &amp; Grid – Flex Basis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<style>
+
+button {
+  padding: 0.8rem 1.1rem;
+  border: 2px solid white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;  
+  background-color: transparent;
+  color: white;
+  cursor: pointer;  
+}
+input {
+  padding: 0.8rem 1.1rem;
+  border-radius: 5px;  
+  border: solid 2px white;
+}
+.landing {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.split {
+  flex-basis: 50%;
+}
+.split-left {
+  background: mediumaquamarine;
+}
+.split-right {
+  background: skyblue;
+}
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .landing {
+    flex-direction: column;
+  }
+}
+
+.blog {
+  display: flex;
+  align-items: center;
+
+  max-width: 30rem;
+  border: 1px solid #dedede;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);  
+  border-radius: 10px;
+  padding: 30px;  
+}
+.blog .img-wrap {
+  flex-basis: 5rem;
+  flex-shrink: 0;
+
+  margin-right: 1rem;
+}
+.blog img {
+  width: 100%;
+  border-radius: 6px;
+}
+.blog p {
+  margin: 0;
+}
+.blog h3 {
+  font-size: 1.3rem;
+  margin: 0 0 5px 0;
+}
+
+.pricing-plans {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.plan {  
+  /*flex-basis: 33.33%;*/
+  /* Below is better solution as it can handle any number of items  */
+  flex-basis: 0%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0 1rem; /* flex-gap alternative solution but does not support Opera mini, older Android/Samsung */
+
+  background: #f8f8f8;
+  box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);  
+  border-radius: 10px;
+  padding: 30px;  
+}
+.plan-highlight {
+  background: mediumaquamarine;
+  color: white;
+}
+.plan h3 {
+  margin: 0;  
+}
+.plan p {
+  margin: 0;
+  padding-top: 20px;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+</style>  
+
+<h1>Flex Basis</h1>  
+
+<h2>Example 1: Split Screens</h2>
+
+<div class="landing">  
+  <div class="split center-content split-left">
+    <div>
+      <h1>Register</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Facilis ipsa ducimus velit rem, quam!</p>
+      <button>Register</button>  
+    </div>
+  </div>
+  <div class="split center-content split-right">
+    <div>      
+      <h1>Login</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Facilis ipsa ducimus velit rem, quam!</p>
+      <div>        
+        <input id="email" type="email" placeholder="Email address">
+        <input id="password" type="password" placeholder="Password">
+        <button>Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="spacer-100"></div>
+
+<h2>Example 2: Blog Post Display</h2>
+
+<div class="blog">
+  <div class="img-wrap">
+    <img src="http://placekitten.com/280/280" alt="kitten profile">
+  </div>
+  <div>
+    <h3>Coding for cats</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, iste.</p>
+  </div>
+</div>
+
+<div class="spacer-100"></div>
+
+<h2>Example 3: Pricing Plans</h2>
+
+<div class="pricing-plans">
+  <div class="plan">
+    <h3>Standard</h3>
+    <span>Monthly</span>  
+    <p>$10</p>
+  </div>
+  <div class="plan plan-highlight">
+    <h3>Popular</h3>
+    <span>Monthly</span>  
+    <p>$20</p>
+  </div>
+  <div class="plan">
+    <h3>Enterprise</h3>
+    <span>Monthly</span>  
+    <p>$50</p>
+  </div>
+</div>
+
+<div class="spacer-100"></div>
+
+</body>
+</html>
